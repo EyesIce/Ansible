@@ -101,7 +101,7 @@
     name: mariadb-server
     state: latest
 
--name: ensure mariadb is running
+- name: ensure mariadb is running
   service:
     name: mariadb
     state: started
