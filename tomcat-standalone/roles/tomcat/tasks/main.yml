@@ -1,7 +1,4 @@
 ---
-vars:
-  mariadb_port: 3306
-  
 - name: Install Java 1.7
   yum: name=java-1.7.0-openjdk state=present
 
