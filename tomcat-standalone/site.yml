@@ -38,4 +38,5 @@
   roles:
     - selinux
     - tomcat
+    - mariadb
     - apache
