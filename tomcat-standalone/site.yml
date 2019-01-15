@@ -25,5 +25,5 @@
   roles:
     - selinux
     - tomcat
-    - mariadb
+    - maria
     - apache
