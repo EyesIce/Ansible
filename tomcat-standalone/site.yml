@@ -17,10 +17,6 @@
       name: httpd
       state: latest
 
-  - name: Install unzip
-    yum:
-      name: unzip
-
   - name: ensure apache is running
     service:
       name: httpd
