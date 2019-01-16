@@ -11,6 +11,3 @@
 
 - name: copy template sql
   template: src=createdb.sql dest=/opt/
-  
-- name: create database
-  command: sh /opt/createdb.sh
