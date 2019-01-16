@@ -8,7 +8,7 @@
   service:
     name: mariadb
     state: started
-	
+
 - name: copy template sql
   template: src=createdb.sql dest=/opt/
 
