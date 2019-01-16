@@ -1,5 +1,14 @@
 ---
+- name: ensure mariadb is at the latest version
+  yum:
+    name: mariadb-server
+    state: latest
 
+- name: ensure mariadb is running
+  service:
+    name: mariadb
+    state: started
+	
 - name: copy template sql
   template: src=createdb.sql dest=/opt/
 
