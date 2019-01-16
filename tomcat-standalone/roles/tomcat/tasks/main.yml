@@ -33,7 +33,7 @@
 - name: Extract archive activiti
   unarchive:
     src: /opt/activiti-5.22.0.zip
-    dest: /opt/activiti-5.22.0
+    dest: /opt/
 
 - name: Copy war to webapp
   command: cp /opt/activiti-5.22.0/wars/activiti-explorer.war /opt/apache-tomcat-7.0.61/webapps/
