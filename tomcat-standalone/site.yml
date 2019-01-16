@@ -5,25 +5,35 @@
   remote_user: root
   become: yes
   become_method: sudo
+  
   vars:
     http_port: 80
     max_clients: 200
     mariadb_port: 3306
+  
   tasks:
   - name: ensure apache is at the latest version
     yum:
       name: httpd
       state: latest
+  
+  - name: Install unzip
+    yum:
+      name: unzip
+	  
   - name: ensure apache is running
     service:
       name: httpd
       state: started
+  
   handlers:
   - name: restart apache
     service:
       name: httpd
       state: restarted
+  
   roles:
     - selinux
     - tomcat
+	  - maria
     - apache
