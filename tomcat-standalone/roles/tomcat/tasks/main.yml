@@ -31,9 +31,7 @@
   get_url: url=https://github.com/Activiti/Activiti/releases/download/activiti-5.22.0/activiti-5.22.0.zip dest=/opt/activiti-5.22.0.zip
 
 - name: Extract archive activiti
-  unarchive:
-    src: /opt/activiti-5.22.0.zip
-    dest: /opt/
+  command: chdir=/usr/share /bin/unzip /opt/activiti-5.22.0.zip -d /opt/
 
 - name: Copy war to webapp
   command: cp /opt/activiti-5.22.0/wars/activiti-explorer.war /opt/apache-tomcat-7.0.61/webapps/
