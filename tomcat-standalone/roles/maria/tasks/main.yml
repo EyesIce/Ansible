@@ -11,3 +11,9 @@
 
 - name: copy template sql
   template: src=createdb.sql dest=/opt/
+
+- name: create script
+  command: chdir=/opt/ /usr/bin/echo "mysql < /opt/createdb.sql">/opt/createdb.sh
+
+- name: create database
+  command: sh /opt/createdb.sh
