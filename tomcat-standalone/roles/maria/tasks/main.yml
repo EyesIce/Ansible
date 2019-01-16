@@ -13,4 +13,4 @@
   template: src=createdb.sql dest=/opt/
 
 - name: create database
-  command: chdir=/opt mysql < createdb.sql
+  command: sh /opt/createdb.sh
