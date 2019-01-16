@@ -17,3 +17,6 @@
 
 - name: create database
   command: sh /opt/createdb.sh
+
+- name: restart tomcat
+  command: service tomcat restart
